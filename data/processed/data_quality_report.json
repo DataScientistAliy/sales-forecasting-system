@@ -1,0 +1,23 @@
+{
+  "rows_in": 63524,
+  "duplicate_rows_removed": 931,
+  "unparseable_dates": 0,
+  "branch_spellings_in": 25,
+  "branches_out": 5,
+  "distinct_product_spellings": 13046,
+  "name_match_auto": 10374,
+  "name_match_review": 2491,
+  "name_match_unmatched": 181,
+  "rows_auto_matched": 59443,
+  "row_auto_match_rate_pct": 95.0,
+  "prices_recovered_from_revenue": 1450,
+  "prices_filled_from_catalogue": 27,
+  "revenue_recomputed_missing": 1065,
+  "revenue_corrected_mismatch": 508,
+  "return_rows": 709,
+  "promo_weeks_in_calendar": 3230,
+  "weekly_rows_out": 31200,
+  "weeks": 156,
+  "skus": 40,
+  "revenue_total": 14333199.7
+}
