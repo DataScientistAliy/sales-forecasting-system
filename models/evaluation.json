@@ -1,0 +1,162 @@
+{
+  "production_model": {
+    "level": "SKU level",
+    "series_count": 40,
+    "train_weeks": 135,
+    "test_weeks": 16,
+    "train_rows": 5400,
+    "test_rows": 640,
+    "holdout_start": "2026-06-01",
+    "results": [
+      {
+        "model": "baseline: last week",
+        "WAPE_pct": 40.33,
+        "MAE_units": 140.45,
+        "RMSE_units": 229.86
+      },
+      {
+        "model": "baseline: 4-week average",
+        "WAPE_pct": 32.21,
+        "MAE_units": 112.17,
+        "RMSE_units": 185.62
+      },
+      {
+        "model": "baseline: same week last year",
+        "WAPE_pct": 39.05,
+        "MAE_units": 135.99,
+        "RMSE_units": 222.53
+      },
+      {
+        "model": "LightGBM (SKU level)",
+        "WAPE_pct": 24.54,
+        "MAE_units": 85.47,
+        "RMSE_units": 135.89
+      }
+    ],
+    "best_baseline_WAPE_pct": 32.21,
+    "model_WAPE_pct": 24.54,
+    "error_reduction_vs_best_baseline_pct": 23.8,
+    "top_features": [
+      {
+        "feature": "expected_promo_effect",
+        "gain_pct": 29.8
+      },
+      {
+        "feature": "roll_mean_8",
+        "gain_pct": 9.2
+      },
+      {
+        "feature": "roll_mean_13",
+        "gain_pct": 8.9
+      },
+      {
+        "feature": "lag_26",
+        "gain_pct": 8.3
+      },
+      {
+        "feature": "lag_52",
+        "gain_pct": 8.2
+      },
+      {
+        "feature": "lag_8",
+        "gain_pct": 7.6
+      },
+      {
+        "feature": "lag_13",
+        "gain_pct": 7.6
+      },
+      {
+        "feature": "trend_4_13",
+        "gain_pct": 7.2
+      },
+      {
+        "feature": "price_vs_list",
+        "gain_pct": 7.1
+      },
+      {
+        "feature": "price_lag_1",
+        "gain_pct": 6.1
+      }
+    ]
+  },
+  "allocation_model": {
+    "level": "branch x SKU",
+    "series_count": 200,
+    "train_weeks": 135,
+    "test_weeks": 16,
+    "train_rows": 27000,
+    "test_rows": 3200,
+    "holdout_start": "2026-06-01",
+    "results": [
+      {
+        "model": "baseline: last week",
+        "WAPE_pct": 72.21,
+        "MAE_units": 50.8,
+        "RMSE_units": 80.27
+      },
+      {
+        "model": "baseline: 4-week average",
+        "WAPE_pct": 56.55,
+        "MAE_units": 39.78,
+        "RMSE_units": 63.74
+      },
+      {
+        "model": "baseline: same week last year",
+        "WAPE_pct": 66.67,
+        "MAE_units": 46.9,
+        "RMSE_units": 74.38
+      },
+      {
+        "model": "LightGBM (branch x SKU)",
+        "WAPE_pct": 49.64,
+        "MAE_units": 34.92,
+        "RMSE_units": 56.29
+      }
+    ],
+    "best_baseline_WAPE_pct": 56.55,
+    "model_WAPE_pct": 49.64,
+    "error_reduction_vs_best_baseline_pct": 12.2,
+    "top_features": [
+      {
+        "feature": "roll_mean_13",
+        "gain_pct": 44.8
+      },
+      {
+        "feature": "roll_mean_8",
+        "gain_pct": 22.3
+      },
+      {
+        "feature": "expected_promo_effect",
+        "gain_pct": 9.9
+      },
+      {
+        "feature": "discount_next_week",
+        "gain_pct": 4.8
+      },
+      {
+        "feature": "lag_52",
+        "gain_pct": 3.6
+      },
+      {
+        "feature": "roll_std_13",
+        "gain_pct": 3.2
+      },
+      {
+        "feature": "price_lag_1",
+        "gain_pct": 3.0
+      },
+      {
+        "feature": "next_week_month",
+        "gain_pct": 2.9
+      },
+      {
+        "feature": "lag_26",
+        "gain_pct": 2.8
+      },
+      {
+        "feature": "price_vs_list",
+        "gain_pct": 2.8
+      }
+    ]
+  }
+}
